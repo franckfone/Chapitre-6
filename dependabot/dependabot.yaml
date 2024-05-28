@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # Mise à jour des dépendances Poetry
+  - package-ecosystem: poetry
+    directory: "/" # Répertoire où se trouve votre fichier pyproject.toml
+    schedule:
+      interval: weekly
+
+  # Mise à jour des GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/" # Répertoire où se trouvent vos fichiers de workflow GitHub Actions
+    schedule:
+      interval: weekly
+
+  # Mise à jour des images Docker
+  - package-ecosystem: "docker"
+    directory: "/" # Répertoire où se trouve votre Dockerfile
+    schedule:
+      interval: weekly
